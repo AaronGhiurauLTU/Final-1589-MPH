@@ -4588,7 +4588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253257552, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
       propertyPath: jumpSpeed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 253257552, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
       propertyPath: moveSpeed
@@ -4598,10 +4598,18 @@ PrefabInstance:
       propertyPath: pitchSpeed
       value: 260
       objectReference: {fileID: 0}
+    - target: {fileID: 3430027694512260875, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3739151138451514558, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4013027301941393522, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 3a16dd1e34986c66999dc0992173ae6a, type: 2}
     - target: {fileID: 8876171176277618126, guid: a872466d61ad54863b565d8b4a97f085, type: 3}
       propertyPath: m_RootOrder
       value: 3

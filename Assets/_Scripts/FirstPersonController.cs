@@ -20,6 +20,9 @@ public class FirstPersonController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         cameraTransform = GetComponentInChildren<Camera>().transform; 
+
+		// lock the cursor
+		Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -38,12 +41,12 @@ public class FirstPersonController : MonoBehaviour
 
         //set the jump
         velo.y = rb.velocity.y;
-
+		Debug.Log(IsGrounded());
         //if (Input.GetKeyDown(KeyCode.Space) &&
         //    //Physics.CheckSphere(groundReference.position, .04f))
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() )
         {
-            velo.y = jumpSpeed;
+            velo.y += jumpSpeed;
         }
 
         //apply movement
