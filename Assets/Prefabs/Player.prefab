@@ -224,7 +224,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 253257552}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,9 +305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 8
-  yawSpeed: 500
-  pitchSpeed: 500
+  jumpSpeed: 6
+  yawSpeed: 260
+  pitchSpeed: 260
   minPitch: -45
   maxPitch: 45
   groundReference: {fileID: 2053760566}
@@ -402,7 +402,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3886973753125048220}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3a16dd1e34986c66999dc0992173ae6a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -41,7 +41,7 @@ public class FirstPersonController : MonoBehaviour
 
         //set the jump
         velo.y = rb.velocity.y;
-		Debug.Log(IsGrounded());
+		//Debug.Log(IsGrounded());
         //if (Input.GetKeyDown(KeyCode.Space) &&
         //    //Physics.CheckSphere(groundReference.position, .04f))
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() )
