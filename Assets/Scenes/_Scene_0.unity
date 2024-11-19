@@ -2411,12 +2411,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
     - target: {fileID: 253257552, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
+      propertyPath: maxPitch
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 253257552, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
+      propertyPath: minPitch
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 253257552, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
       propertyPath: rocketVelocity.x
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 253257552, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
       propertyPath: rocketVelocity.y
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647429629, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 3739151138451514558, guid: 0d75cefb3b4c792b189f51d9c0223f92, type: 3}
       propertyPath: m_Name

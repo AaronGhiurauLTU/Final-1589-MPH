@@ -12,12 +12,14 @@ public class Explosion : MonoBehaviour
 		if (!Camera.main)
 			return;
 			
-		Vector3 direction = Camera.main.transform.parent.position - transform.position;
+		Vector3 direction = (Camera.main.transform.parent.position + Vector3.up) - transform.position;
 		Debug.Log(direction + " " + direction.magnitude);
 		if (direction.magnitude <= explosionRadius)
 		{
 			FirstPersonController firstPersonController = Camera.main.transform.parent.GetComponent<FirstPersonController>();
 			firstPersonController.AddExternalForce(direction * maxForce);
 		}
+
+		Destroy(gameObject, 5f);
 	}
 }

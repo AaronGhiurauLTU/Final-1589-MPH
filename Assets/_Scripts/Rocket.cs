@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     public float speed;
+	public GameObject explosionObj;
     Quaternion rotation;
 
     // Start is called before the first frame update
@@ -23,6 +24,8 @@ public class Rocket : MonoBehaviour
     {
         Debug.Log("KABOOM");
         if(!other.CompareTag("Player")) {
+			GameObject explosion = Instantiate(explosionObj);
+			explosion.transform.position = transform.position;
             Destroy(gameObject);
         }
     }

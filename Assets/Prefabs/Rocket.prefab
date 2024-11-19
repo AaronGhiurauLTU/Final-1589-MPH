@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  explosionObj: {fileID: 1620142549904251133, guid: 2dbcf07b6fb7537eebf76c56ba713011, type: 3}
 --- !u!135 &7976122274967749419
 SphereCollider:
   m_ObjectHideFlags: 0
