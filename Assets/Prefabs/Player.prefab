@@ -311,6 +311,7 @@ MonoBehaviour:
   minPitch: -45
   maxPitch: 45
   groundReference: {fileID: 2053760566}
+  rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
 --- !u!1 &3886973753125048220
 GameObject:
   m_ObjectHideFlags: 0
