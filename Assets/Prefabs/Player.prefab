@@ -305,13 +305,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 6
+  jumpSpeed: 300
   yawSpeed: 260
   pitchSpeed: 260
   minPitch: -45
   maxPitch: 45
   groundReference: {fileID: 2053760566}
+  rocketVelocity: {x: 500, y: 500, z: 0}
   rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
+<<<<<<< HEAD
+  rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
+=======
+  rocketVelocity: {x: 500, y: 500, z: 0}
+>>>>>>> origin/temp2
 --- !u!1 &3886973753125048220
 GameObject:
   m_ObjectHideFlags: 0

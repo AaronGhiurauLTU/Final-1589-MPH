@@ -7,12 +7,10 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-	// default timer length in minutes
-	public float startingTimeMinutes = 5f; 
 	public TextMeshProUGUI timerTMP;
 
 	// total time remaining, in seconds
-	private float timeRemaining;
+	private float timeElapsed;
 
 	// time remaining in minutes, seconds, and milliseconds
 	private int timeMinutes, timeSeconds, timeMilliseconds;
@@ -21,7 +19,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RestartTimer(startingTimeMinutes);
+        RestartTimer();
     }
 
     // Update is called once per frame
@@ -30,9 +28,9 @@ public class Timer : MonoBehaviour
         UpdateTimer();
     }
 	// reset the timer and start it
-	public void RestartTimer(float startingTimeMinutes)
+	public void RestartTimer()
 	{
-		timeRemaining = startingTimeMinutes * 60;
+		timeElapsed = 0;
 		timerRunning = true;
 	}
 
@@ -42,31 +40,20 @@ public class Timer : MonoBehaviour
 		if (!timerRunning)
 			return;
 		
-		timeRemaining -= Time.deltaTime;
-
-		// prevent the timer from going below 0
-		timeRemaining = Math.Max(timeRemaining, 0);
+		timeElapsed += Time.deltaTime;
 
 		// update the minutes, seconds, and ms for a readable time
 		ConvertTimeFromSeconds();
 
 		// update timer UI
 		timerTMP.text = GetTimeString();
-
-		// stop the timer when it reaches 0
-		if (timeRemaining <= 0)
-		{
-			timerRunning = false;
-
-			// additional functionality when timer stops goes here
-		}
 	}
 
 	// update the minutes, seconds, and milliseconds remaining
 	private void ConvertTimeFromSeconds()
 	{
-		float remainder = timeRemaining;
-		//https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
+		float remainder = timeElapsed;
+
 		timeMinutes = Mathf.FloorToInt(remainder / 60);
 
 		remainder -= timeMinutes * 60;
