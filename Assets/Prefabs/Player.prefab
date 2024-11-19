@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1647429630}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2053760566}
   m_Layer: 0
   m_Name: GroundReference
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3430027694512260875}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,19 +305,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 300
+  jumpSpeed: 6
   yawSpeed: 260
   pitchSpeed: 260
   minPitch: -45
   maxPitch: 45
   groundReference: {fileID: 2053760566}
-  rocketVelocity: {x: 500, y: 500, z: 0}
   rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
-<<<<<<< HEAD
-  rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
-=======
   rocketVelocity: {x: 500, y: 500, z: 0}
->>>>>>> origin/temp2
 --- !u!1 &3886973753125048220
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +327,7 @@ GameObject:
   - component: {fileID: 4013027301941393522}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,8 @@ public class DeathZone : MonoBehaviour
 	public GameObject playerPrefab;
 	private void OnTriggerEnter(Collider other)
 	{
+		if (!other.transform.parent)
+			return;
 		// capsule collider is a child of the player object so that is why the parent's tag is checked
 		if (other.transform.parent.CompareTag("Player"))
 		{
