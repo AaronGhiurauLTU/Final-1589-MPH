@@ -12,6 +12,7 @@ public class FirstPersonController : MonoBehaviour
     public float maxPitch   =   45.0f;
     public Transform groundReference;
 
+	public Vector3 rocketVelocity = Vector3.zero;
     private Rigidbody rb;
     private Transform cameraTransform;
 
@@ -38,19 +39,23 @@ public class FirstPersonController : MonoBehaviour
         velo += transform.right * h;
         velo += transform.forward * v;
         velo *= moveSpeed;
+		//Debug.Log(velo);
+
+		// shift the position of the game object's transform so none of the forces on the rigid body get affected
+		transform.position += velo * Time.deltaTime;
 
         //set the jump
-        velo.y = rb.velocity.y;
-		//Debug.Log(IsGrounded());
-        //if (Input.GetKeyDown(KeyCode.Space) &&
-        //    //Physics.CheckSphere(groundReference.position, .04f))
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() )
         {
-            velo.y += jumpSpeed;
+            rb.AddForce(Vector3.up * jumpSpeed);
         }
 
-        //apply movement
-        rb.velocity = velo;
+		// test force for simulating rocket impact
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			Debug.Log("q pressed");
+			rb.AddForce(rocketVelocity);
+		}
 
         //apply rotation
         transform.localEulerAngles += new Vector3(
@@ -69,10 +74,12 @@ public class FirstPersonController : MonoBehaviour
         cameraTransform.localEulerAngles = new Vector3(newPitch,
             cameraTransform.localEulerAngles.y,
             cameraTransform.localEulerAngles.z);
-
-        //TODO: add jump
-
     }
+
+	public void AddExternalForce(Vector3 force)
+	{
+		rb.AddForce(force);
+	}
 
     private bool IsGrounded()
     {
