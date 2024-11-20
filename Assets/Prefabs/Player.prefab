@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1647429630}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,11 +305,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 6
+  jumpSpeed: 300
   yawSpeed: 260
   pitchSpeed: 260
-  minPitch: -45
-  maxPitch: 45
+  minPitch: -85
+  maxPitch: 85
   groundReference: {fileID: 2053760566}
   rocket: {fileID: 4911100281601486434, guid: 05fc591f667cfc319aeec396765c7c5e, type: 3}
   rocketVelocity: {x: 500, y: 500, z: 0}

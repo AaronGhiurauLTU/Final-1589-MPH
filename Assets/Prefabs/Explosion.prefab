@@ -4901,5 +4901,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ee846f90230f432b3c4c7d0cadafc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 750
-  explosionRadius: 3
+  maxForce: 600
+  explosionRadius: 4
