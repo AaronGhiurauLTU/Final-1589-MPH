@@ -8,12 +8,12 @@ public class Explosion : MonoBehaviour
 	public float explosionRadius = 3f;
 	void Start()
 	{
-		Debug.Log(Camera.main);
+//		Debug.Log(Camera.main);
 		if (!Camera.main)
 			return;
 			
 		Vector3 direction = (Camera.main.transform.parent.position + Vector3.up) - transform.position;
-		Debug.Log(direction + " " + direction.magnitude);
+	//	Debug.Log(direction + " " + direction.magnitude);
 		if (direction.magnitude <= explosionRadius)
 		{
 			FirstPersonController firstPersonController = Camera.main.transform.parent.GetComponent<FirstPersonController>();

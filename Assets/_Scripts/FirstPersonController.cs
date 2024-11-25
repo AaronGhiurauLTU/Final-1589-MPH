@@ -11,7 +11,6 @@ public class FirstPersonController : MonoBehaviour
     public float minPitch   =   -45.0f;
     public float maxPitch   =   45.0f;
     public Transform groundReference;
-    public GameObject rocket;
 
 	public Vector3 rocketVelocity = Vector3.zero;
     private Rigidbody rb;
@@ -30,9 +29,7 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Input.GetMouseButtonDown(0)) {
-            Instantiate(rocket, cameraTransform.position, cameraTransform.rotation);
-        }
+
         //put all input axis info into variable
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
