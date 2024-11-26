@@ -17,9 +17,10 @@
 <br>
 
 1. **What are the controls to your game? How do we play?**
-    W, A, S, D - move
-    Mouse - Camera
-    Space - Jump
+    W, A, S, D - move  
+    Mouse - Camera  
+    Space - Jump  
+    Left Click - Shoot Rocket  
 
 <br>
 
@@ -47,7 +48,7 @@
 <br>
 
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
-
+repo with movement [script][https://github.com/TheAsuro/VelocityMovement]
 
 
 <br>
