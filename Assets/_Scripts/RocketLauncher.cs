@@ -19,7 +19,6 @@ public class RocketLauncher : MonoBehaviour
     {
 		timeTillReload -= Time.deltaTime;
 		timeTillReload = Mathf.Max(timeTillReload, 0);
-		Debug.Log(timeTillReload);
         if(Input.GetMouseButtonDown(0) && timeTillReload == 0) {
 			// uses the position of the rocket launcher and the rotation of the camera
 			timeTillReload = reloadSpeed;

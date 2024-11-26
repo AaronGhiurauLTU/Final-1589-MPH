@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public float moveSpeed  =   2.0f;
-    public float jumpSpeed  =   2.0f;
+    public float accel = 200f;
+    public float airAccel = 200f;
+    public float maxSpeed = 6.4f;
+    public float maxAirSpeed = 0.6f;
+    public float friction = 8f;
+
+    public float jumpForce = 5f;
+    private float lastJumpPress = -1f;
+    private float jumpPressDuration = 0.1f;
+    private bool onGround = false;
+
     public float yawSpeed   =   260.0f;
     public float pitchSpeed =   260.0f;
     public float minPitch   =   -45.0f;
     public float maxPitch   =   45.0f;
+
     public Transform groundReference;
 
 	public Vector3 rocketVelocity = Vector3.zero;
@@ -26,37 +36,23 @@ public class FirstPersonController : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
     }
 
+    void Update()
+    {
+        if(Input.GetButton("Jump"))
+        {
+            lastJumpPress = Time.time;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-
         //put all input axis info into variable
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
         float yaw = Input.GetAxis("Mouse X");
         float pitch = Input.GetAxis("Mouse Y");
-
-        Vector3 velo = Vector3.zero;
-        velo += transform.right * h;
-        velo += transform.forward * v;
-        velo *= moveSpeed;
-		//Debug.Log(velo);
-
-		// shift the position of the game object's transform so none of the forces on the rigid body get affected
-		transform.position += velo * Time.deltaTime;
-
-        //set the jump
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() )
-        {
-            rb.AddForce(Vector3.up * jumpSpeed);
-        }
-
-		// test force for simulating rocket impact
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			Debug.Log("q pressed");
-			rb.AddForce(rocketVelocity);
-		}
 
         //apply rotation
         transform.localEulerAngles += new Vector3(
@@ -68,13 +64,16 @@ public class FirstPersonController : MonoBehaviour
         float newPitch = cameraTransform.localEulerAngles.x + pitchDelta;
         newPitch = angleWithin180(newPitch);
 
-        //Debug.Log($"Pitch before: {newPitch}");
         newPitch = Mathf.Clamp(newPitch, minPitch, maxPitch);
-        //Debug.Log($"Pitch after: {newPitch}");
 
         cameraTransform.localEulerAngles = new Vector3(newPitch,
             cameraTransform.localEulerAngles.y,
             cameraTransform.localEulerAngles.z);
+        
+        Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
+        playerVelocity = CalulateFriction(playerVelocity);
+        playerVelocity += CalulateMovement(h, v, playerVelocity);
+        GetComponent<Rigidbody>().velocity = playerVelocity;
     }
 
 	public void AddExternalForce(Vector3 force)
@@ -90,10 +89,58 @@ public class FirstPersonController : MonoBehaviour
     private float angleWithin180(float angle)
     {
         return angle > 180 ? angle - 360 : angle;
-        //this does the same thing as the ternary operator above
-        //if (angle > 180) 
-        //    return angle - 360;
-        //else 
-        //    return angle;
+    }
+
+    private Vector3 CalulateFriction(Vector3 playerVelocity)
+    {
+        onGround = IsGrounded();
+        float speed = playerVelocity.magnitude;
+        if(!onGround || Input.GetButton("Jump") || speed == 0f)
+        {
+            return playerVelocity;
+        }
+        float drop = speed * friction * Time.deltaTime;
+        return playerVelocity * (Mathf.Max(speed - drop, 0f) / speed);
+    }
+
+    private Vector3 CalulateMovement(float horizontal, float vertical, Vector3 playerVelocity)
+    {
+        onGround = IsGrounded();
+
+        float curAccel = accel;
+        float curMaxSpeed = maxSpeed;
+        if(!onGround)
+        {
+            curAccel = airAccel;
+            curMaxSpeed = maxAirSpeed;
+        }
+
+        Vector3 camRotation = new Vector3(0f, cameraTransform.rotation.eulerAngles.y, 0f);
+        Vector3 inputVelocity = Quaternion.Euler(camRotation) * new Vector3(horizontal * curAccel, 0f, vertical * curAccel);
+        
+
+        Vector3 alignedInputVelocity = new Vector3(inputVelocity.x, 0f, inputVelocity.z) * Time.deltaTime;
+        Vector3 currentVelocity = new Vector3(playerVelocity.x, 0f, playerVelocity.z);
+
+        float max = Mathf.Max(0f, 1 - (currentVelocity.magnitude / curMaxSpeed));
+        float velocityDot = Vector3.Dot(currentVelocity, alignedInputVelocity);
+
+        Vector3 modifiedVelocity = alignedInputVelocity * max;
+        
+        Vector3 correctVelocity = Vector3.Lerp(alignedInputVelocity, modifiedVelocity, velocityDot);
+
+        correctVelocity += GetJumpVelocity(playerVelocity.y);
+        return correctVelocity;
+    }
+
+    private Vector3 GetJumpVelocity(float y)
+    {
+        Vector3 jumpVelocity = Vector3.zero;
+        if(Time.time < lastJumpPress + jumpPressDuration && y < jumpForce && IsGrounded())
+        {
+            lastJumpPress = -1f;
+            jumpVelocity = new Vector3(0f, jumpForce - y, 0f);
+        }
+        return jumpVelocity;
     }
 }
