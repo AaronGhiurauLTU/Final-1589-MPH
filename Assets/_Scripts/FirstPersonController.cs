@@ -47,6 +47,9 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+		if (Time.timeScale == 0)
+			return;
+			
         //put all input axis info into variable
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");

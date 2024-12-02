@@ -46,6 +46,9 @@ namespace BigRookGames.Weapons
 
         private void Update()
         {
+			if (Time.timeScale == 0)
+				return;
+
             // --- If rotate is set to true, rotate the weapon in scene ---
             if (rotate)
             {

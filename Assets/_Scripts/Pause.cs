@@ -28,10 +28,12 @@ public class Pause : MonoBehaviour
 
 			if (!paused)
 			{
+				Time.timeScale = 1f;
 				Cursor.lockState = CursorLockMode.Locked;
 			}
 			else
 			{
+				Time.timeScale = 0f;
 				Cursor.lockState = CursorLockMode.None;
 			}
 		}
@@ -45,7 +47,7 @@ public class Pause : MonoBehaviour
 			return;
 
 		FirstPersonController fpc = Camera.main.transform.parent.GetComponent<FirstPersonController>();
-
+	
 		fpc.UpdateMouseSensitivity(newSensitivity);
 	}
 }
