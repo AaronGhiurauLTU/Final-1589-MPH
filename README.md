@@ -32,6 +32,7 @@
 
 3. **Any assets used that you didn't create yourself?** <br> (art, music, etc. Just tell us where you got it, link it here)
 
+Rocket launcher, rocket projectile, and rocket sfx: https://assetstore.unity.com/packages/3d/props/guns/stylized-rocket-launcher-complete-kit-with-visual-effects-and-so-178718
 
 <br>
 
