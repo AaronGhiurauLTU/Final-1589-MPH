@@ -71,7 +71,7 @@ public class FirstPersonController : MonoBehaviour
             cameraTransform.localEulerAngles.z);
         
         Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
-        playerVelocity = CalulateFriction(playerVelocity);
+        //playerVelocity = CalulateFriction(playerVelocity);
         playerVelocity += CalulateMovement(h, v, playerVelocity);
         GetComponent<Rigidbody>().velocity = playerVelocity;
     }
