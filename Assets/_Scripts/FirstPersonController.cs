@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -83,6 +84,12 @@ public class FirstPersonController : MonoBehaviour
 	public void AddExternalForce(Vector3 force)
 	{
 		rb.AddForce(force);
+	}
+
+	public void UpdateMouseSensitivity(int newSensitivity)
+	{
+		yawSpeed = newSensitivity;
+		pitchSpeed = newSensitivity;
 	}
 
     private bool IsGrounded()
