@@ -8,7 +8,6 @@ public class FirstPersonController : MonoBehaviour
     public float airAccel = 200f;
     public float maxSpeed = 6.4f;
     public float maxAirSpeed = 0.6f;
-    public float friction = 8f;
 
     public float jumpForce = 5f;
     private float lastJumpPress = -1f;
@@ -69,9 +68,14 @@ public class FirstPersonController : MonoBehaviour
         cameraTransform.localEulerAngles = new Vector3(newPitch,
             cameraTransform.localEulerAngles.y,
             cameraTransform.localEulerAngles.z);
-        
+
+        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftControl)) {
+            rb.mass = 0.75f;
+        } else {
+            rb.mass = 1f;
+        }
+
         Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
-        //playerVelocity = CalulateFriction(playerVelocity);
         playerVelocity += CalulateMovement(h, v, playerVelocity);
         GetComponent<Rigidbody>().velocity = playerVelocity;
     }
@@ -89,18 +93,6 @@ public class FirstPersonController : MonoBehaviour
     private float angleWithin180(float angle)
     {
         return angle > 180 ? angle - 360 : angle;
-    }
-
-    private Vector3 CalulateFriction(Vector3 playerVelocity)
-    {
-        onGround = IsGrounded();
-        float speed = playerVelocity.magnitude;
-        if(!onGround || Input.GetButton("Jump") || speed == 0f)
-        {
-            return playerVelocity;
-        }
-        float drop = speed * friction * Time.deltaTime;
-        return playerVelocity * (Mathf.Max(speed - drop, 0f) / speed);
     }
 
     private Vector3 CalulateMovement(float horizontal, float vertical, Vector3 playerVelocity)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
 	public float maxForce = 750f;
+    public float maxMagnitude = 3f;
 	public float explosionRadius = 3f;
 	void Start()
 	{
@@ -13,6 +14,8 @@ public class Explosion : MonoBehaviour
 			return;
 			
 		Vector3 direction = (Camera.main.transform.parent.position + Vector3.up) - transform.position;
+        direction.Normalize();
+        direction *= maxMagnitude;
 	//	Debug.Log(direction + " " + direction.magnitude);
 		if (direction.magnitude <= explosionRadius)
 		{

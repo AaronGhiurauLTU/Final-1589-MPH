@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 8876171176277618126}
   - component: {fileID: 663808498367758916}
   - component: {fileID: 253257552}
+  - component: {fileID: 2447568919280120305}
+  - component: {fileID: 9012144220639838334}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -336,6 +338,52 @@ MonoBehaviour:
   maxPitch: 85
   groundReference: {fileID: 2053760566}
   rocketVelocity: {x: 500, y: 500, z: 0}
+--- !u!136 &2447568919280120305
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739151138451514558}
+  m_Material: {fileID: 13400000, guid: ee2f4f1632ff2877ba41bc051f32d845, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.05, z: 0}
+--- !u!136 &9012144220639838334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739151138451514558}
+  m_Material: {fileID: 13400000, guid: ee2f4f1632ff2877ba41bc051f32d845, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!1 &3886973753125048220
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,10 +487,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.25
+  m_Height: 1.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.25, z: 0}
 --- !u!1 &5460578850167292322
 GameObject:
   m_ObjectHideFlags: 0

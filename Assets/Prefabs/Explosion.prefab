@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxForce: 600
+  maxMagnitude: 1
   explosionRadius: 4
 --- !u!198 &6192004134680006276
 ParticleSystem:
