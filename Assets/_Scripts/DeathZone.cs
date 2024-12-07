@@ -5,6 +5,13 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
 	public GameObject playerPrefab;
+	public static int deathCount = 0;
+
+	void Start()
+	{
+		// reset death count on scene load
+		deathCount = 0;
+	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if (!other.transform.parent)
@@ -16,7 +23,11 @@ public class DeathZone : MonoBehaviour
 			Destroy(other.transform.parent.gameObject);
 
 			// respawn a new character
-			Instantiate(playerPrefab);
+			GameObject newPlayer = Instantiate(playerPrefab);
+
+			newPlayer.transform.position = Checkpoint.currentCheckpoint;
+
+			deathCount++;
 		}
     }
 }

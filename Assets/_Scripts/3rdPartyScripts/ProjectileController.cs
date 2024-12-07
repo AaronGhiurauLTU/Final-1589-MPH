@@ -47,7 +47,7 @@ namespace BigRookGames.Weapons
             // --- return if not enabled because OnCollision is still called if compoenent is disabled ---
             if (!enabled) return;
 
-			if(!other.gameObject.CompareTag("Player")) {
+			if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Checkpoint")) {
 				GameObject explosion = Instantiate(explosionObj);
 				explosion.transform.position = transform.position;
 				Destroy(gameObject);

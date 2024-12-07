@@ -20,7 +20,8 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+		// toggle pause if escape is pressed, and you cannot pause if time is already frozen (such as from winning)
+        if (Input.GetKeyDown(KeyCode.Escape) && !(!paused && Time.timeScale == 0))
 		{
 			paused = !paused;
 

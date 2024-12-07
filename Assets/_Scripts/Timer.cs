@@ -66,13 +66,11 @@ public class Timer : MonoBehaviour
 	}
 
 	// returns a string of time formatted with (minutes):(seconds):(milliseconds)
-	private string GetTimeString()
+	public string GetTimeString()
 	{
 		// pad with 0s to the left so there is no shifting string length
 		return timeMinutes.ToString().PadLeft(2, '0') + ":" +
 			timeSeconds.ToString().PadLeft(2, '0') + ":" +
 			timeMilliseconds.ToString().PadLeft(3, '0');
 	}
-
-
 }

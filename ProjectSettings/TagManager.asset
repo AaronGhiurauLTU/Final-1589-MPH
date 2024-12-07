@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DeathZone
   - Destructible
+  - EndZone
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
