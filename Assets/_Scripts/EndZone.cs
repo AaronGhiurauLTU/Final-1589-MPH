@@ -24,7 +24,7 @@ public class EndZone : MonoBehaviour
 			endScreen.enabled = true;
 			Time.timeScale = 0f;
 			Cursor.lockState = CursorLockMode.None;
-			statsTMP.text = $"Finished in {gameManager.GetComponent<Timer>().GetTimeString()} with {DeathZone.deathCount} death(s)!";
+			statsTMP.text = $"Finished in {gameManager.GetComponent<Timer>().GetTimeString()}!\n{DeathZone.deathCount} death(s)!";
 		}
     }
 }

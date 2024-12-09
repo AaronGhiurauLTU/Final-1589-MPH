@@ -34,6 +34,10 @@
 
 Rocket launcher, rocket projectile, and rocket sfx: https://assetstore.unity.com/packages/3d/props/guns/stylized-rocket-launcher-complete-kit-with-visual-effects-and-so-178718
 
+Speedway font https://www.dafont.com/speedway.font
+A4 Speed font https://www.dafont.com/a4-speed.font
+
+
 <br>
 
 4. **Did you receive help from anyone outside this class?** <br> (list their names and what they helped with)
