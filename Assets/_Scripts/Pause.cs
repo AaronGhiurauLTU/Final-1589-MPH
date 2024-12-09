@@ -26,7 +26,7 @@ public class Pause : MonoBehaviour
 			paused = !paused;
 
 			pauseCanvas.enabled = paused;
-
+			sensitivityScrollbar.value = FirstPersonController.yawSpeed / 1000;
 			if (!paused)
 			{
 				Time.timeScale = 1f;

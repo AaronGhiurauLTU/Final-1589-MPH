@@ -8256,46 +8256,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2415931327607090074, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 2415931327607090074, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1154325074130016859, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 2415931327607090074, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624021469472101491, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240296439142944784, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 3240296439142944784, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1154325074130016859, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 3240296439142944784, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4997944910618604008, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 4997944910618604008, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1154325074130016859, guid: 4bc2a9e23bb701d2288954127f78c849, type: 2}
-    - target: {fileID: 4997944910618604008, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5173898182676181117, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8376,10 +8336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5617084313036703969, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6960305625212355791, guid: cee5b9a01b9bd703290c0b05faec0e12, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -8431,7 +8387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4556559087163417627, guid: 47330abb14f9e4ee2a58066a0685f245, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881641037033871147, guid: 47330abb14f9e4ee2a58066a0685f245, type: 3}
       propertyPath: m_text
