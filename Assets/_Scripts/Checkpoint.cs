@@ -9,6 +9,8 @@ public class Checkpoint : MonoBehaviour
     
 	void Start()
 	{
+		// disable renderer on scene load
+		GetComponent<Renderer>().enabled = false;
 		// reset checkpoint on scene load
 		currentCheckpoint = Vector3.zero;
 		currentCheckpointRotation = Quaternion.identity;
