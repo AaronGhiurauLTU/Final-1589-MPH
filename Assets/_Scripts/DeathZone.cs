@@ -25,8 +25,9 @@ public class DeathZone : MonoBehaviour
 
 			// respawn a new character
 			GameObject newPlayer = Instantiate(playerPrefab);
-
+			
 			newPlayer.transform.position = Checkpoint.currentCheckpoint;
+			newPlayer.transform.rotation = Checkpoint.currentCheckpointRotation;
 
 			deathCount++;
 		}

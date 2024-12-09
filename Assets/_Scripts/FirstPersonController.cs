@@ -79,11 +79,12 @@ public class FirstPersonController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftControl)) {
             rb.mass = 0.75f;
         } else {
-            rb.mass = 1f;
+            //rb.mass = 1f;
+			rb.mass = 0.75f;
         }
 
         Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
-        playerVelocity += CalulateMovement(h, v, playerVelocity);
+        playerVelocity += CalculateMovement(h, v, playerVelocity);
         GetComponent<Rigidbody>().velocity = playerVelocity;
     }
 
@@ -108,10 +109,9 @@ public class FirstPersonController : MonoBehaviour
         return angle > 180 ? angle - 360 : angle;
     }
 
-    private Vector3 CalulateMovement(float horizontal, float vertical, Vector3 playerVelocity)
+    private Vector3 CalculateMovement(float horizontal, float vertical, Vector3 playerVelocity)
     {
         onGround = IsGrounded();
-		Debug.Log(onGround);
 
         float curAccel = accel;
         float curMaxSpeed = maxSpeed;

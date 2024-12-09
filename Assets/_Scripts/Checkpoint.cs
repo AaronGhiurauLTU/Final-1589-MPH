@@ -5,12 +5,13 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
 	public static Vector3 currentCheckpoint = Vector3.zero;
+	public static Quaternion currentCheckpointRotation = Quaternion.identity;
     
 	void Start()
 	{
-		GetComponent<Renderer>().enabled = false;
 		// reset checkpoint on scene load
 		currentCheckpoint = Vector3.zero;
+		currentCheckpointRotation = Quaternion.identity;
 	}
 	
 	private void OnTriggerEnter(Collider other)
@@ -21,6 +22,7 @@ public class Checkpoint : MonoBehaviour
 		if (other.transform.parent.CompareTag("Player"))
 		{
 			currentCheckpoint = transform.position;
+			currentCheckpointRotation = transform.rotation;
 		}
     }
 }
