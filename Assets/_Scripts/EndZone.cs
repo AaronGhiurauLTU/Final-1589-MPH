@@ -11,6 +11,7 @@ public class EndZone : MonoBehaviour
 
 	void Start()
     {
+	//	GetComponent<Renderer>().enabled = false;
         endScreen.enabled = false;
     }
 

@@ -67,10 +67,10 @@ namespace BigRookGames.Weapons
 				// --- Destroy this object after 2 seconds. Using a delay because the particle system needs to finish ---
 				Destroy(gameObject, 5f);
 
-				// Destroy destructible objects
-				if (other.gameObject.CompareTag("Destructible")) {
-					Destroy(other.gameObject);
-				}
+				// // Destroy destructible objects
+				// if (other.gameObject.CompareTag("Destructible")) {
+				// 	Destroy(other.gameObject);
+				// }
 			}
         }
 

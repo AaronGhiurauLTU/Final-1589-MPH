@@ -8,6 +8,7 @@ public class Checkpoint : MonoBehaviour
     
 	void Start()
 	{
+		GetComponent<Renderer>().enabled = false;
 		// reset checkpoint on scene load
 		currentCheckpoint = Vector3.zero;
 	}

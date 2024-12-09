@@ -14,6 +14,7 @@ namespace BigRookGames.Weapons
         // --- Muzzle ---
         public GameObject muzzlePrefab;
         public GameObject muzzlePosition;
+		public GameObject rocketProjectilePosition;
 
         // --- Config ---
         public bool autoFire;
@@ -86,7 +87,7 @@ namespace BigRookGames.Weapons
             // --- Shoot Projectile Object ---
             if (projectilePrefab != null)
             {
-                GameObject newProjectile = Instantiate(projectilePrefab, muzzlePosition.transform.position, muzzlePosition.transform.rotation);
+                GameObject newProjectile = Instantiate(projectilePrefab, rocketProjectilePosition.transform.position, muzzlePosition.transform.rotation);
             }
 
             // --- Disable any gameobjects, if needed ---

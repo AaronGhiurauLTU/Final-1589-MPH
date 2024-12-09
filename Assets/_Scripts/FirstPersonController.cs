@@ -34,6 +34,9 @@ public class FirstPersonController : MonoBehaviour
 
 		// lock the cursor
 		Cursor.lockState = CursorLockMode.Locked;
+
+		// reenable disabled objects destroyed by rocket launcher when player respawns
+		DestructibleObject.ReenableObjects();
     }
 
     void Update()
@@ -108,6 +111,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 CalulateMovement(float horizontal, float vertical, Vector3 playerVelocity)
     {
         onGround = IsGrounded();
+		Debug.Log(onGround);
 
         float curAccel = accel;
         float curMaxSpeed = maxSpeed;

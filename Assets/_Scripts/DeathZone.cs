@@ -9,6 +9,7 @@ public class DeathZone : MonoBehaviour
 
 	void Start()
 	{
+		GetComponent<Renderer>().enabled = false;
 		// reset death count on scene load
 		deathCount = 0;
 	}

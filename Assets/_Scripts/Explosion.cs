@@ -9,6 +9,7 @@ public class Explosion : MonoBehaviour
 	public float explosionRadius = 3f;
 	void Start()
 	{
+		Destroy(gameObject, .75f);
 //		Debug.Log(Camera.main);
 		if (!Camera.main)
 			return;
@@ -21,7 +22,14 @@ public class Explosion : MonoBehaviour
 			FirstPersonController firstPersonController = Camera.main.transform.parent.GetComponent<FirstPersonController>();
 			firstPersonController.AddExternalForce(direction * maxForce);
 		}
+	}
 
-		Destroy(gameObject, 5f);
+	public void OnTriggerEnter(Collider other) 
+	{
+		if (other.CompareTag("Destructible"))
+		{
+			DestructibleObject.disabledObjects.Enqueue(other.gameObject);
+			other.gameObject.SetActive(false);
+		}
 	}
 }
