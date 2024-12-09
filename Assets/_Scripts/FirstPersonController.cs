@@ -15,8 +15,8 @@ public class FirstPersonController : MonoBehaviour
     private float jumpPressDuration = 0.1f;
     private bool onGround = false;
 
-    public float yawSpeed   =   260.0f;
-    public float pitchSpeed =   260.0f;
+    public static float yawSpeed   =   260.0f;
+    public static float pitchSpeed =   260.0f;
     public float minPitch   =   -45.0f;
     public float maxPitch   =   45.0f;
 
