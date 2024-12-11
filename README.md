@@ -20,8 +20,11 @@
 
 1. **What are the controls to your game? How do we play?**
     W, A, S, D - move
+
     Mouse - Camera
+
     Space - Jump
+
     Left Click - Shoot Rocket
 
 <br>
@@ -37,13 +40,17 @@
 Rocket launcher, rocket projectile, and rocket sfx: https://assetstore.unity.com/packages/3d/props/guns/stylized-rocket-launcher-complete-kit-with-visual-effects-and-so-178718
 
 Speedway font https://www.dafont.com/speedway.font
+
 A4 Speed font https://www.dafont.com/a4-speed.font
 
 Wispy Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/wispy-skybox-21737
+
 Worn Wooden Crate: https://assetstore.unity.com/packages/3d/props/furniture/worn-wooden-crate-246735
 
 Music by: Bensound.com/free-music-for-videos
+
 Artist: Benjamin Tissot
+
 License code: Q3INJBSLMNSLWKKW
 
 <br>
@@ -61,13 +68,16 @@ License code: Q3INJBSLMNSLWKKW
 <br>
 
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
+
 repo with movement [script][https://github.com/TheAsuro/VelocityMovement]
 
 
 <br>
 
 7. **What trouble did you have with this project?**
+
 Inconsistent time working on project
+
 Physics engine was hard to program for
 
 
