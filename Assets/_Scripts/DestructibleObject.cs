@@ -10,7 +10,12 @@ public class DestructibleObject : MonoBehaviour
 	{
 		while (disabledObjects.Count > 0)
 		{
-			disabledObjects.Dequeue()?.SetActive(true);
+			GameObject obj = disabledObjects.Dequeue();
+			
+			if (obj != null)
+			{
+				obj.SetActive(true);
+			}
 		}
 	}
 }
