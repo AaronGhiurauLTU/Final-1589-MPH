@@ -1770,7 +1770,7 @@ PrefabInstance:
     - target: {fileID: 4118521944389535343, guid: 8a57eda5ce7f297a19bff0a8613b4df7, type: 3}
       propertyPath: statsTMP
       value: 
-      objectReference: {fileID: 1509219549}
+      objectReference: {fileID: 1239243269865695492}
     - target: {fileID: 4118521944389535343, guid: 8a57eda5ce7f297a19bff0a8613b4df7, type: 3}
       propertyPath: endScreen
       value: 
@@ -2987,6 +2987,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 4556559087163417627, guid: 47330abb14f9e4ee2a58066a0685f245, type: 3}
   m_PrefabInstance: {fileID: 1239243269865695490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239243269865695492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881641037033871147, guid: 47330abb14f9e4ee2a58066a0685f245, type: 3}
+  m_PrefabInstance: {fileID: 1239243269865695490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4992846943802261498
 PrefabInstance:
   m_ObjectHideFlags: 0
