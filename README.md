@@ -40,6 +40,10 @@ A4 Speed font https://www.dafont.com/a4-speed.font
 Wispy Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/wispy-skybox-21737
 Worn Wooden Crate: https://assetstore.unity.com/packages/3d/props/furniture/worn-wooden-crate-246735
 
+Music by: Bensound.com/free-music-for-videos
+Artist: Benjamin Tissot
+License code: Q3INJBSLMNSLWKKW
+
 <br>
 
 4. **Did you receive help from anyone outside this class?** <br> (list their names and what they helped with)

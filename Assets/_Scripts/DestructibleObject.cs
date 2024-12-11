@@ -10,7 +10,7 @@ public class DestructibleObject : MonoBehaviour
 	{
 		while (disabledObjects.Count > 0)
 		{
-			disabledObjects.Dequeue().SetActive(true);
+			disabledObjects.Dequeue()?.SetActive(true);
 		}
 	}
 }
