@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public Behaviour button;
+    public GameObject button;
 	void Start()
     {
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        if(nextScene < 0 && nextScene >= SceneManager.sceneCountInBuildSettings) {
-            button.enabled = false;
+        if(nextScene >= SceneManager.sceneCountInBuildSettings) {
+            button.SetActive(false);
         }
     }
 	public void StartGame()
