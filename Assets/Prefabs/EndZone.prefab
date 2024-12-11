@@ -121,3 +121,4 @@ MonoBehaviour:
   endScreen: {fileID: 4556559087163417627, guid: 47330abb14f9e4ee2a58066a0685f245, type: 3}
   statsTMP: {fileID: 6857031014116597815, guid: 9b68d9767d38467f4ab46a3f7fc3b94d, type: 3}
   gameManager: {fileID: 1293887742079804004, guid: 61e3671d6d07c67babae2e1938346c63, type: 3}
+  particlesObj: {fileID: 6742097606491142586, guid: 48bda754de5aa67c7aa4e0beabe16712, type: 3}

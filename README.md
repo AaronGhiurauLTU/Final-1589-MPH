@@ -37,6 +37,8 @@ Rocket launcher, rocket projectile, and rocket sfx: https://assetstore.unity.com
 Speedway font https://www.dafont.com/speedway.font
 A4 Speed font https://www.dafont.com/a4-speed.font
 
+Wispy Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/wispy-skybox-21737
+Worn Wooden Crate: https://assetstore.unity.com/packages/3d/props/furniture/worn-wooden-crate-246735
 
 <br>
 

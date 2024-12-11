@@ -9,6 +9,8 @@ public class EndZone : MonoBehaviour
 	public TextMeshProUGUI statsTMP;
 	public GameObject gameManager;
 
+	public GameObject particlesObj;
+
 	void Start()
     {
 	//	GetComponent<Renderer>().enabled = false;
@@ -25,6 +27,10 @@ public class EndZone : MonoBehaviour
 			endScreen.enabled = true;
 			Time.timeScale = 0f;
 			Cursor.lockState = CursorLockMode.None;
+
+			GameObject newParticles = Instantiate(particlesObj);
+			newParticles.transform.position = other.transform.position;
+
 			statsTMP.text = $"Finished in {gameManager.GetComponent<Timer>().GetTimeString()}!\n{DeathZone.deathCount} death(s)!";
 		}
     }
