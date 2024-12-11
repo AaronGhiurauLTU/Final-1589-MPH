@@ -72,6 +72,7 @@ License code: Q3INJBSLMNSLWKKW
 
 repo with movement [script][https://github.com/TheAsuro/VelocityMovement]
 
+running particle system while paused: https://stackoverflow.com/questions/32445917/play-a-particle-system-when-time-timescale-0
 
 <br>
 
