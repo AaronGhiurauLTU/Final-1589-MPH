@@ -9,6 +9,8 @@
 
 ---
 
+![gameplay](./game.gif)
+
 # Required ReadMe Info for ALL MCS1243 Projects
 * **Project**   - 1589-MPH
 * **Your Name** - Evan Wheeler, Aaron Ghiurau
@@ -17,10 +19,10 @@
 <br>
 
 1. **What are the controls to your game? How do we play?**
-    W, A, S, D - move  
-    Mouse - Camera  
-    Space - Jump  
-    Left Click - Shoot Rocket  
+    W, A, S, D - move
+    Mouse - Camera
+    Space - Jump
+    Left Click - Shoot Rocket
 
 <br>
 
@@ -65,7 +67,8 @@ repo with movement [script][https://github.com/TheAsuro/VelocityMovement]
 <br>
 
 7. **What trouble did you have with this project?**
-
+Inconsistent time working on project
+Physics engine was hard to program for
 
 
 <br>
