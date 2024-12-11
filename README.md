@@ -19,6 +19,7 @@
 <br>
 
 1. **What are the controls to your game? How do we play?**
+
     W, A, S, D - move
 
     Mouse - Camera
